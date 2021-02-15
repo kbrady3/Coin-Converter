@@ -33,9 +33,8 @@ public class getCentsServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		String userCents = request.getParameter("userCents");
-		CoinConverter userCoins = new CoinConverter(Integer.parseInt(userCents));
-		PrintWriter writer = response.getWriter();
-		writer.println(userCoins.toString()); //note the change to userCoins
-		writer.close();
+		CoinConverter userCoins = new CoinConverter(Integer.parseInt(userCents));		
+		request.setAttribute("userCoinPouch", userCoins);
+		getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
 	}
 }

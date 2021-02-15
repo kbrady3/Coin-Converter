@@ -63,6 +63,30 @@ public CoinConverter() {
 	}
 
 
+	public int getCents() {
+		return cents;
+	}
+
+	public int getDollars() {
+		return dollars;
+	}
+
+	public int getQuarters() {
+		return quarters;
+	}
+
+	public int getDimes() {
+		return dimes;
+	}
+
+	public int getNickels() {
+		return nickels;
+	}
+
+	public int getPennies() {
+		return pennies;
+	}
+
 	@Override
 	public String toString() {
 		return "CoinConverter [cents=" + cents + ", dollars=" + dollars + ", quarters=" + quarters + ", dimes=" + dimes + ", nickels=" + nickels + ", pennies=" + pennies + "]";
